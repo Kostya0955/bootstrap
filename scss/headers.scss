@@ -47,15 +47,14 @@
          background-image: linear-gradient(to right, #09052f 0%, #311d5e 100%);
      }
 
+     
      .top-nav {
-        
          &_menu {
              list-style: none;
              padding: 0;
              display: flex;
          }
-         
-
+        
          li {
              margin-right: 25px;
 
@@ -72,5 +71,49 @@
              }
          }
      }
+     
 
- }
+
+     @media screen and (max-width: 1000px) {
+         .close-header {
+             display: none !important;
+         }
+         #burger {
+             visibility: visible;
+         }
+
+         .burger {
+             display: block;
+             height: 40px;
+             width: 30px;
+             cursor: pointer;
+         }
+
+         .top-nav_menu {
+            
+                 list-style: none;
+                 overflow: hidden;
+                 min-height: 40px;
+                 margin: 0px auto;
+                 display: block;
+             li {
+                
+                 display: none;
+
+             }
+             li.open {
+                  
+                 float: none;
+                
+                 visibility: visible;
+                 display: block;
+                 text-align: center;
+                 padding-top: 40px;
+                 width: 100%;
+                 height: auto;
+
+             }
+         }
+
+     }
+    }
